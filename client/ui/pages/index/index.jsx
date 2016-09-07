@@ -5,6 +5,8 @@ import React, { Component } from 'react'
 import { render } from 'react-dom'
 
 // Import custom components
+import InputField from '../../components/input-field/input-field.jsx'
+import Navbar from '../../components/navbar/navbar.jsx'
 import PokeDropdown from '../../components/poke-dropdown/poke-dropdown.jsx'
 import PokeList from '../../components/poke-list/poke-list.jsx'
 import PokeGif from '../../components/poke-gif/poke-gif.jsx'
@@ -41,11 +43,15 @@ export default class Index extends Component {
  render() {
    return (
      <div>
-       <header className="jumbotron">
-         <PokeGif url={this.state.pokeUrl} />
-       </header>
+        <Navbar />
 
-       <PokeDropdown renderPokeDropdown={this.renderPokeDropdown()} />
+        <div className="jumbotron">
+          <PokeGif url={this.state.pokeUrl} />
+        </div>
+
+        <PokeDropdown renderPokeDropdown={this.renderPokeDropdown()} />
+
+        <InputField type="text" name="poke-name" placeholder="What's your favorite Pokemon?" />
      </div>
    )
  }

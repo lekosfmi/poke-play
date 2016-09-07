@@ -1,0 +1,26 @@
+.form-group {
+  margin-bottom: 0;
+
+  .form-control {
+    border-radius: 0;
+    border: transparent;
+    font-size: 16px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid white;
+    position: absolute;
+    bottom: 0;
+    padding: 30px 15px;
+    color: #4F75D4;
+    font-weight: bold;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+
+    &:focus {
+      border-color: transparent;
+      border-top: 5px solid #4F75D4;
+      border-bottom: 5px solid #4F75D4;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+    }
+  }
+}

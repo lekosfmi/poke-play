@@ -1,0 +1,41 @@
+.input-group {
+  margin-bottom: 0;
+  position: fixed;
+  bottom: 0;
+
+  .form-control {
+    border-radius: 0;
+    border: transparent;
+    font-size: 16px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid white;
+    padding: 30px 15px;
+    color: #0071b9;
+    font-weight: bold;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+
+  .btn-default {
+    padding: 19px;
+    border-width: 0;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: darkgrey;
+
+    &:hover, &:active, &:focus {
+      background: #fff;
+      border-color: #fff;
+      box-shadow: none;
+      outline: none;
+      -webkit-outline: none;
+    }
+  }
+
+  .input-group-btn {
+    border-top: solid 5px #fff;
+    border-bottom: solid 5px #fff;
+  }
+
+}

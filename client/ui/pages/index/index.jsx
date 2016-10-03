@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 import { render } from 'react-dom'
 
 // Import custom components
-import InputField from '../../components/input-field/input-field.jsx'
+import PokeInput from '../../components/poke-input/poke-input.jsx'
 import Navbar from '../../components/navbar/navbar.jsx'
 import PokeDropdown from '../../components/poke-dropdown/poke-dropdown.jsx'
 import PokeList from '../../components/poke-list/poke-list.jsx'
@@ -24,34 +24,30 @@ export default class Index extends Component {
  }
 
  renderPokemon(name) {
-   if (name) {
-     let pokeName = name.toLowerCase()
-     let pokeUrl = `http://www.pokestadium.com/sprites/xy/${pokeName}` + '.gif'
+   let pokeName = name.toLowerCase()
+   let pokeUrl = `http://www.pokestadium.com/sprites/xy/${pokeName}` + '.gif'
 
-     this.setState({ pokeUrl })
-   }
+   this.setState({ pokeUrl })
  }
 
- renderPokeDropdown() {
-   return this.props.pokemons.map((p) => {
-     return <PokeList key={p._id}
-                      name={p.name}
-                     onClick={this.renderPokemon.bind(this, p.name)} />
-   })
+ pokeSubmit(e) {
+   e.preventDefault()
+
+   const pokeName = $('#poke-name').val().toLowerCase()
+
+   this.renderPokemon(pokeName)
  }
 
  render() {
    return (
      <div>
-        <Navbar />
+        {/* }<Navbar /> */}
 
         <div className="jumbotron">
           <PokeGif url={this.state.pokeUrl} />
         </div>
 
-        <PokeDropdown renderPokeDropdown={this.renderPokeDropdown()} />
-
-        <InputField type="text" name="poke-name" placeholder="What's your favorite Pokemon?" />
+        <PokeInput onSubmit={this.pokeSubmit.bind(this)} />
      </div>
    )
  }

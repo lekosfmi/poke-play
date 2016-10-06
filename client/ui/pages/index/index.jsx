@@ -41,7 +41,7 @@ export default class Index extends Component {
  render() {
    return (
      <div>
-        {/* }<Navbar /> */}
+        <Navbar />
 
         <div className="jumbotron">
           <PokeGif url={this.state.pokeUrl} />

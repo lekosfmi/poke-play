@@ -2,6 +2,9 @@
 import React, { Component, PropTypes } from 'react'
 import { render } from 'react-dom'
 
+// custom components
+import ImageBtn from '../imageBtn/imageBtn.jsx'
+
 
 export default class PokeInput extends Component {
   changeBorderColor(color) {
@@ -27,14 +30,15 @@ export default class PokeInput extends Component {
     return (
       <form onSubmit={this.props.onSubmit} className="input-group">
 
-          <input type="text"
-                 className="form-control"
-                 id="poke-name"
-                 placeholder="What's your favorite Pokemon?"
-                 onFocus={this.onFocus.bind(this)}
-                 onBlur={this.onBlur.bind(this)}
-                 autoComplete="new-password" />
+        <ImageBtn />
 
+        <input type="text"
+               className="form-control"
+               id="poke-name"
+               placeholder="What's your favorite Pokemon?"
+               onFocus={this.onFocus.bind(this)}
+               onBlur={this.onBlur.bind(this)}
+               autoComplete="new-password" />
 
          <span className="input-group-btn">
             <button type="submit" className="btn btn-default">Go!</button>

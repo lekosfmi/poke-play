@@ -35,7 +35,7 @@ export default class PokeInput extends Component {
         <input type="text"
                className="form-control"
                id="poke-name"
-               placeholder="What's your favorite Pokemon?"
+               placeholder="What's your favorite Pokemon? Rayquaza"
                onFocus={this.onFocus.bind(this)}
                onBlur={this.onBlur.bind(this)}
                autoComplete="new-password" />
@@ -43,7 +43,6 @@ export default class PokeInput extends Component {
          <span className="input-group-btn">
             <button type="submit" className="btn btn-default">Go!</button>
          </span>
-
       </form>
     )
   }

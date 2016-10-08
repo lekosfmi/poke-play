@@ -1,4 +1,4 @@
-# Pokémon Play
+# Poké Play
 
 A fun app to show Pokémon figure using the [PokéStadium](http://www.pokestadium.com) API with beautiful background.
 

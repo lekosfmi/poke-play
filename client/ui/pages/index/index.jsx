@@ -3,6 +3,7 @@ import { Meteor } from 'meteor/meteor'
 import { createContainer } from 'meteor/react-meteor-data'
 import React, { Component } from 'react'
 import { render } from 'react-dom'
+import pokemonGif from 'pokemon-gif'
 
 // Import custom components
 import PokeInput from '../../components/poke-input/poke-input.jsx'
@@ -19,13 +20,14 @@ export default class Index extends Component {
   constructor(props) {
    super(props)
    this.state = {
-     pokeUrl: 'http://www.pokestadium.com/sprites/xy/rayquaza.gif'
+     pokeUrl: pokemonGif('rayquaza')
    }
  }
 
  renderPokemon(name) {
-   let pokeName = name.toLowerCase()
-   let pokeUrl = `http://www.pokestadium.com/sprites/xy/${pokeName}` + '.gif'
+   const isPositiveInteger = (n) => n == "0" || ((n | 0) > 0 && n % 1 == 0)
+
+   let pokeUrl = pokemonGif((isPositiveInteger(name) ? parseInt(name) : name))
 
    this.setState({ pokeUrl })
  }

@@ -1,4 +1,4 @@
-Pokemon Play
+# Pokemon Play
 
 A fun app to show Pokemon figure with beautiful background.
 

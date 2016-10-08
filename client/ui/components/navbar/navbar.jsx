@@ -17,7 +17,7 @@ export default class Navbar extends Component {
 
             <ul className="nav navbar-nav navbar-right">
               <li className="dropdown">
-                <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button">Info <span className="caret"></span></a>
+                <a className="dropdown-toggle" data-toggle="dropdown" role="button">Info <span className="caret"></span></a>
                 <ul className="dropdown-menu">
                   <li><a href="http://www.lekosfmi.com" target="_blank">Lekosfmi</a></li>
                   <li><a href="https://github.com/lekosfmi/pokemon-play" target="_blank">Github</a></li>

@@ -16,7 +16,7 @@ import Index from '../../client/ui/pages/index/index.jsx'
 /* Routes */
 FlowRouter.route("/", { // Index
   action() {
-    title('Pokemon')
+    title('Poké Play')
     mount(App, { content: (<Index />) })
   }
 })

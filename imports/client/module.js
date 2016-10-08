@@ -1,1 +1,1 @@
-export const title = (text) => document.title = `${text} | Lekosfmi`
+export const title = (text) => document.title = `${text}`

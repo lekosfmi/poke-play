@@ -35,7 +35,7 @@ export default class PokeInput extends Component {
         <input type="text"
                className="form-control"
                id="poke-name"
-               placeholder="What's your favorite Pokemon? Rayquaza"
+               placeholder="Type in a Pokémon's name or their Pokédex # from 1 - 721"
                onFocus={this.onFocus.bind(this)}
                onBlur={this.onBlur.bind(this)}
                autoComplete="new-password" />

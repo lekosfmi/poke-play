@@ -9,4 +9,4 @@ Live app can be access here: [pokeplay.lekosfmi.com](http://pokeplay.lekosfmi.co
 - MeteorJS
 - NodeJS
 
-###### Copyright (C) Vanielle Le
+###### Copyright (C) Vanielle Lee
